@@ -1,0 +1,60 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:react-hooks/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "H": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["react", "@typescript-eslint", "jsx-max-len", "i18next"],
+  "rules": {
+    "react/jsx-filename-extension": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/restrict-plus-operands": "error",
+    "@typescript-eslint/prefer-for-of": "error",
+    "@typescript-eslint/no-unnecessary-type-arguments": "warn",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-key": "error",
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "no-void": "off",
+    "no-param-reassign": [
+      "error",
+      { "props": true, "ignorePropertyModificationsFor": ["state"] }
+    ],
+    "jsx-max-len/jsx-max-len": [
+      2,
+      { "lineMaxLength": 100, "tabWidth": 2, "maxAttributesPerLine": 1 }
+    ],
+    "no-shadow": "off",
+    "no-use-before-define": "off",
+    "no-undef": "off",
+    "no-redeclare": "warn",
+    "linebreak-style": 0
+  }
+}
